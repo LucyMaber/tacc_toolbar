@@ -1,0 +1,2204 @@
+{
+  "misgendering_deadnaming": {
+    "label": "Misgendering & Deadnaming",
+    "data_tag": "misgendering_deadnaming",
+    "data_color": "#FF5733",
+    "submenu": {
+      "misgendering": {
+        "label": "Misgendering",
+        "data_tag": "`misgendering`",
+        "data_color": "#FF8D70",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Misgendering_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Misgendering_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Misgendering",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "misgendering_quotes": {
+        "label": "Misgendering Quotes (direct quotes that misgender)",
+        "data_tag": "misgendering_quotes",
+        "data_color": "#FF8D70",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Misgendering Quotes_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Misgendering Quotes_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Misgendering Quotes",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "deadnaming": {
+        "label": "Deadnaming (using a former name)",
+        "data_tag": "deadnaming",
+        "data_color": "#FF8D70",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Deadnaming_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Deadnaming_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Deadnaming",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "intersex_invalidation": {
+        "label": "Intersex Invalidation (misgendering & erasure)",
+        "data_tag": "intersex_invalidation",
+        "data_color": "#FF9C85",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Intersex Invalidation_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Intersex Invalidation_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Intersex Invalidation",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      }
+    }
+  },
+  "biological_gender_labeling": {
+    "label": "Biological Gender Labeling",
+    "data_tag": "biological_gender_labeling",
+    "data_color": "#33A1FF",
+    "submenu": {
+      "biological_male": {
+        "label": "Biological Male",
+        "data_tag": "biological_male",
+        "data_color": "#70C1FF",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Biological Male_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Biological Male_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Biological Male",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "biological_male_quotes": {
+        "label": "Biological Male Quotes",
+        "data_tag": "biological_male_quotes",
+        "data_color": "#70C1FF",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Biological Male Quotes_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Biological Male Quotes_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Biological Male Quotes",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "biological_female": {
+        "label": "Biological Female",
+        "data_tag": "biological_female",
+        "data_color": "#70C1FF",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Biological Female_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Biological Female_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Biological Female",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "biological_female_quotes": {
+        "label": "Biological Female Quotes",
+        "data_tag": "biological_female_quotes",
+        "data_color": "#70C1FF",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Biological Female Quotes_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Biological Female Quotes_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Biological Female Quotes",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "intersex_labeling": {
+        "label": "Intersex Labeling & Erasure",
+        "data_tag": "intersex_labeling",
+        "data_color": "#70C1FF",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Intersex Labeling & Erasure_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Intersex Labeling & Erasure_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Intersex Labeling & Erasure",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "intersex_labeling_quotes": {
+        "label": "Intersex Labeling Quotes",
+        "data_tag": "intersex_labeling_quotes",
+        "data_color": "#70C1FF",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Intersex Labeling Quotes_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Intersex Labeling Quotes_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Intersex Labeling Quotes",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      }
+    }
+  },
+  "pronoun_language_misuse": {
+    "label": "Pronoun & Language Misuse",
+    "data_tag": "pronoun_language_misuse",
+    "data_color": "#8D33FF",
+    "submenu": {
+      "pronoun_abuse": {
+        "label": "Pronoun Abuse / Incorrect Pronoun Usage",
+        "data_tag": "pronoun_abuse",
+        "data_color": "#A670FF",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Pronoun Abuse / Incorrect Pronoun Usage_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Pronoun Abuse / Incorrect Pronoun Usage_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Pronoun Abuse / Incorrect Pronoun Usage",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "pronoun_erasure": {
+        "label": "Pronoun Erasure",
+        "data_tag": "pronoun_erasure",
+        "data_color": "#A670FF",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Pronoun Erasure_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Pronoun Erasure_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Pronoun Erasure",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "pronoun_erasure_quotes": {
+        "label": "Pronoun Erasure Quotes",
+        "data_tag": "pronoun_erasure_quotes",
+        "data_color": "#A670FF",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Pronoun Erasure Quotes_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Pronoun Erasure Quotes_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Pronoun Erasure Quotes",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "intersex_pronoun_misuse": {
+        "label": "Intersex Pronoun Misuse / Erasure",
+        "data_tag": "intersex_pronoun_misuse",
+        "data_color": "#A670FF",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Intersex Pronoun Misuse / Erasure_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Intersex Pronoun Misuse / Erasure_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Intersex Pronoun Misuse / Erasure",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      }
+    }
+  },
+  "exclusionary_language": {
+    "label": "Exclusionary Language",
+    "data_tag": "exclusionary_language",
+    "data_color": "#33FF57",
+    "submenu": {
+      "exclusionary_language_quotes": {
+        "label": "Exclusionary Language Quotes",
+        "data_tag": "exclusionary_language_quotes",
+        "data_color": "#70FF8D",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Exclusionary Language Quotes_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Exclusionary Language Quotes_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Exclusionary Language Quotes",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "inclusive_language": {
+        "label": "Inclusive Language & Terminology",
+        "data_tag": "inclusive_language",
+        "data_color": "#70FF8D",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Inclusive Language & Terminology_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Inclusive Language & Terminology_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Inclusive Language & Terminology",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      }
+    }
+  },
+  "transphobic_slurs": {
+    "label": "Transphobic Slurs & Negative Stereotypes",
+    "data_tag": "transphobic_slurs",
+    "data_color": "#FF33A1",
+    "submenu": {
+      "other_transphobia": {
+        "label": "Other Transphobia (general transphobic language)",
+        "data_tag": "other_transphobia",
+        "data_color": "#FF70B8",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Other Transphobia_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Other Transphobia_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Other Transphobia",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "transphobic_slurs_item": {
+        "label": "Transphobic Slurs",
+        "data_tag": "transphobic_slurs_item",
+        "data_color": "#FF70B8",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Transphobic Slurs_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Transphobic Slurs_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Transphobic Slurs",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "transphobic_slurs_quotes": {
+        "label": "Transphobic Slurs Quotes",
+        "data_tag": "transphobic_slurs_quotes",
+        "data_color": "#FF70B8",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Transphobic Slurs Quotes_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Transphobic Slurs Quotes_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Transphobic Slurs Quotes",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "anti_intersex_slurs": {
+        "label": "Anti-Intersex Slurs",
+        "data_tag": "anti_intersex_slurs",
+        "data_color": "#FF70B8",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Anti-Intersex Slurs_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Anti-Intersex Slurs_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Anti-Intersex Slurs",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      }
+    }
+  },
+  "gender_stereotyping": {
+    "label": "Gender Stereotyping",
+    "data_tag": "gender_stereotyping",
+    "data_color": "#FFC133",
+    "submenu": {
+      "gender_stereotyping_quotes": {
+        "label": "Gender Stereotyping Quotes",
+        "data_tag": "gender_stereotyping_quotes",
+        "data_color": "#FFD070",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Gender Stereotyping Quotes_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Gender Stereotyping Quotes_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Gender Stereotyping Quotes",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "intersex_stereotyping": {
+        "label": "Intersex Stereotyping",
+        "data_tag": "intersex_stereotyping",
+        "data_color": "#FFD070",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Intersex Stereotyping_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Intersex Stereotyping_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Intersex Stereotyping",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      }
+    }
+  },
+  "intersectional_institutional_discrimination": {
+    "label": "Intersectional & Institutional Discrimination",
+    "data_tag": "intersectional_institutional_discrimination",
+    "data_color": "#33FFC1",
+    "submenu": {
+      "cisnormativity": {
+        "label": "Cisnormativity",
+        "data_tag": "cisnormativity",
+        "data_color": "#70FFD6",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Cisnormativity_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Cisnormativity_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Cisnormativity",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "queerphobia": {
+        "label": "Queerphobia",
+        "data_tag": "queerphobia",
+        "data_color": "#70FFD6",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Queerphobia_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Queerphobia_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Queerphobia",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "queerphobia_quotes": {
+        "label": "Queerphobia Quotes",
+        "data_tag": "queerphobia_quotes",
+        "data_color": "#70FFD6",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Queerphobia Quotes_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Queerphobia Quotes_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Queerphobia Quotes",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "intersectional_transphobia": {
+        "label": "Intersectional Transphobia",
+        "data_tag": "intersectional_transphobia",
+        "data_color": "#70FFD6",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Intersectional Transphobia_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Intersectional Transphobia_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Intersectional Transphobia",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "institutional_legislative_transphobia": {
+        "label": "Institutional / Legislative Transphobia",
+        "data_tag": "institutional_legislative_transphobia",
+        "data_color": "#70FFD6",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Institutional / Legislative Transphobia_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Institutional / Legislative Transphobia_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Institutional / Legislative Transphobia",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "intersex_institutional_discrimination": {
+        "label": "Intersex Institutional Discrimination",
+        "data_tag": "intersex_institutional_discrimination",
+        "data_color": "#70FFD6",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Intersex Institutional Discrimination_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Intersex Institutional Discrimination_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Intersex Institutional Discrimination",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      }
+    }
+  },
+  "service_rights_discrimination": {
+    "label": "Service & Rights Discrimination",
+    "data_tag": "service_rights_discrimination",
+    "data_color": "#FF8333",
+    "submenu": {
+      "healthcare_medical_transphobia": {
+        "label": "Healthcare / Medical Transphobia",
+        "data_tag": "healthcare_medical_transphobia",
+        "data_color": "#FFA070",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Healthcare / Medical Transphobia_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Healthcare / Medical Transphobia_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Healthcare / Medical Transphobia",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "employment_discrimination": {
+        "label": "Employment Discrimination",
+        "data_tag": "employment_discrimination",
+        "data_color": "#FFA070",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Employment Discrimination_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Employment Discrimination_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Employment Discrimination",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "housing_discrimination": {
+        "label": "Housing Discrimination",
+        "data_tag": "housing_discrimination",
+        "data_color": "#FFA070",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Housing Discrimination_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Housing Discrimination_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Housing Discrimination",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "educational_discrimination": {
+        "label": "Educational Discrimination",
+        "data_tag": "educational_discrimination",
+        "data_color": "#FFA070",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Educational Discrimination_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Educational Discrimination_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Educational Discrimination",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "legal_discrimination": {
+        "label": "Legal Discrimination",
+        "data_tag": "legal_discrimination",
+        "data_color": "#FFA070",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Legal Discrimination_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Legal Discrimination_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Legal Discrimination",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "intersex_rights_discrimination": {
+        "label": "Intersex Rights Discrimination",
+        "data_tag": "intersex_rights_discrimination",
+        "data_color": "#FFA070",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Intersex Rights Discrimination_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Intersex Rights Discrimination_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Intersex Rights Discrimination",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      }
+    }
+  },
+  "microaggressions": {
+    "label": "Microaggressions & Subtle Exclusions",
+    "data_tag": "microaggressions",
+    "data_color": "#33FFB5",
+    "submenu": {
+      "gender_microaggressions": {
+        "label": "Gender Microaggressions",
+        "data_tag": "gender_microaggressions",
+        "data_color": "#70FFC9",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Gender Microaggressions_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Gender Microaggressions_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Gender Microaggressions",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "gender_microaggressions_quotes": {
+        "label": "Gender Microaggressions Quotes",
+        "data_tag": "gender_microaggressions_quotes",
+        "data_color": "#70FFC9",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Gender Microaggressions Quotes_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Gender Microaggressions Quotes_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Gender Microaggressions Quotes",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "microinvalidations": {
+        "label": "Microinvalidations",
+        "data_tag": "microinvalidations",
+        "data_color": "#70FFC9",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Microinvalidations_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Microinvalidations_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Microinvalidations",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "invasive_questioning": {
+        "label": "Invasive Questioning",
+        "data_tag": "invasive_questioning",
+        "data_color": "#70FFC9",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Invasive Questioning_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Invasive Questioning_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Invasive Questioning",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "normalization_transphobic_humor": {
+        "label": "Normalization of Transphobic Humor",
+        "data_tag": "normalization_transphobic_humor",
+        "data_color": "#70FFC9",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Normalization of Transphobic Humor_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Normalization of Transphobic Humor_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Normalization of Transphobic Humor",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "intersex_microaggressions": {
+        "label": "Intersex Microaggressions",
+        "data_tag": "intersex_microaggressions",
+        "data_color": "#70FFC9",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Intersex Microaggressions_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Intersex Microaggressions_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Intersex Microaggressions",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      }
+    }
+  },
+  "visibility_representation": {
+    "label": "Visibility, Representation & Narrative Issues",
+    "data_tag": "visibility_representation",
+    "data_color": "#A1FF33",
+    "submenu": {
+      "trans_invisibility": {
+        "label": "Trans Invisibility",
+        "data_tag": "trans_invisibility",
+        "data_color": "#C1FF70",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Trans Invisibility_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Trans Invisibility_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Trans Invisibility",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "silencing_trans_voices": {
+        "label": "Silencing of Trans Voices",
+        "data_tag": "silencing_trans_voices",
+        "data_color": "#C1FF70",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Silencing of Trans Voices_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Silencing of Trans Voices_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Silencing of Trans Voices",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "tokenization_trans_representation": {
+        "label": "Tokenization of Trans Representation",
+        "data_tag": "tokenization_trans_representation",
+        "data_color": "#C1FF70",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Tokenization of Trans Representation_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Tokenization of Trans Representation_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Tokenization of Trans Representation",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "media_misrepresentation": {
+        "label": "Media Misrepresentation",
+        "data_tag": "media_misrepresentation",
+        "data_color": "#C1FF70",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Media Misrepresentation_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Media Misrepresentation_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Media Misrepresentation",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "cultural_erasure": {
+        "label": "Cultural Erasure of Trans Histories",
+        "data_tag": "cultural_erasure",
+        "data_color": "#C1FF70",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Cultural Erasure of Trans Histories_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Cultural Erasure of Trans Histories_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Cultural Erasure of Trans Histories",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "intersex_visibility": {
+        "label": "Intersex Visibility & Representation",
+        "data_tag": "intersex_visibility",
+        "data_color": "#C1FF70",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Intersex Visibility & Representation_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Intersex Visibility & Representation_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Intersex Visibility & Representation",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      }
+    }
+  },
+  "additional_nuanced_issues": {
+    "label": "Additional Nuanced Issues",
+    "data_tag": "additional_nuanced_issues",
+    "data_color": "#FF3333",
+    "submenu": {
+      "transmisandry": {
+        "label": "Transmisandry / Transmisandry Quotes",
+        "data_tag": "transmisandry",
+        "data_color": "#FF7070",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Transmisandry_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Transmisandry_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Transmisandry",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "transmisogyny": {
+        "label": "Transmisogyny / Transmisogyny Quotes",
+        "data_tag": "transmisogyny",
+        "data_color": "#FF7070",
+        "variant": [
+          {
+            "label": "{name_subject}_Transmisogyny_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Transmisogyny_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Transmisogyny",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "nonbinary_misgendering": {
+        "label": "Nonbinary Misgendering / Nonbinary Quotes",
+        "data_tag": "nonbinary_misgendering",
+        "data_color": "#FF7070",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Nonbinary Misgendering_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Nonbinary Misgendering_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Nonbinary Misgendering",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "nonbinary_correct_gendering": {
+        "label": "Nonbinary Correct Gendering / Nonbinary Correct Gendering Quotes",
+        "data_tag": "nonbinary_correct_gendering",
+        "data_color": "#FF7070",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Nonbinary Correct Gendering_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Nonbinary Correct Gendering_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Nonbinary Correct Gendering",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "forced_gender_presentation": {
+        "label": "Forced Gender Presentation",
+        "data_tag": "forced_gender_presentation",
+        "data_color": "#FF7070",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Forced Gender Presentation_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Forced Gender Presentation_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Forced Gender Presentation",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "pathologizing_identities": {
+        "label": "Pathologizing Trans or Nonbinary Identities",
+        "data_tag": "pathologizing_identities",
+        "data_color": "#FF7070",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Pathologizing Trans or Nonbinary Identities_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Pathologizing Trans or Nonbinary Identities_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Pathologizing Trans or Nonbinary Identities",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "trans_violence": {
+        "label": "Trans Violence",
+        "data_tag": "trans_violence",
+        "data_color": "#FF7070",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Trans Violence_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Trans Violence_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Trans Violence",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "sexual_objectification": {
+        "label": "Sexual Objectification of Trans Individuals",
+        "data_tag": "sexual_objectification",
+        "data_color": "#FF7070",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Sexual Objectification of Trans Individuals_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Sexual Objectification of Trans Individuals_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Sexual Objectification of Trans Individuals",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "dog_whistles_gaslighting": {
+        "label": "Transphobic Dog Whistles & Gaslighting",
+        "data_tag": "dog_whistles_gaslighting",
+        "data_color": "#FF7070",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Transphobic Dog Whistles & Gaslighting_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Transphobic Dog Whistles & Gaslighting_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Transphobic Dog Whistles & Gaslighting",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "intersex_erasure": {
+        "label": "Intersex Erasure",
+        "data_tag": "intersex_erasure",
+        "data_color": "#FF7070",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Intersex Erasure_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Intersex Erasure_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Intersex Erasure",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "enforcement_binary_gender": {
+        "label": "Enforcement of Binary Gender Norms",
+        "data_tag": "enforcement_binary_gender",
+        "data_color": "#FF7070",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Enforcement of Binary Gender Norms_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Enforcement of Binary Gender Norms_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Enforcement of Binary Gender Norms",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "fetishization_trans_bodies": {
+        "label": "The Fetishization of Trans Bodies",
+        "data_tag": "fetishization_trans_bodies",
+        "data_color": "#FF7070",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_The Fetishization of Trans Bodies_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "The Fetishization of Trans Bodies_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_The Fetishization of Trans Bodies",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "surgical_status_discrimination": {
+        "label": "Surgical Status Discrimination",
+        "data_tag": "surgical_status_discrimination",
+        "data_color": "#FF7070",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Surgical Status Discrimination_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Surgical Status Discrimination_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Surgical Status Discrimination",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "cultural_misappropriation": {
+        "label": "Cultural Misappropriation of Trans Narratives",
+        "data_tag": "cultural_misappropriation",
+        "data_color": "#FF7070",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Cultural Misappropriation of Trans Narratives_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Cultural Misappropriation of Trans Narratives_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Cultural Misappropriation of Trans Narratives",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "assumed_cisgender_privilege": {
+        "label": "Assumed Cisgender Privilege",
+        "data_tag": "assumed_cisgender_privilege",
+        "data_color": "#FF7070",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Assumed Cisgender Privilege_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Assumed Cisgender Privilege_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Assumed Cisgender Privilege",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "trans_identity_denial": {
+        "label": "Trans Identity Denial",
+        "data_tag": "trans_identity_denial",
+        "data_color": "#FF7070",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Trans Identity Denial_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Trans Identity Denial_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Trans Identity Denial",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "performative_allyship": {
+        "label": "Performative Allyship",
+        "data_tag": "performative_allyship",
+        "data_color": "#FF7070",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Performative Allyship_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Performative Allyship_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Performative Allyship",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      }
+    }
+  },
+  "allyship_positive_counter": {
+    "label": "Allyship, Positive Actions & Counter Speech",
+    "data_tag": "allyship_positive_counter",
+    "data_color": "#33A1A1",
+    "submenu": {
+      "affirming_language": {
+        "label": "Affirming & Inclusive Language",
+        "data_tag": "affirming_language",
+        "data_color": "#70D6D6",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Affirming & Inclusive Language_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Affirming & Inclusive Language_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Affirming & Inclusive Language",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "supportive_allyship": {
+        "label": "Supportive Allyship & Solidarity",
+        "data_tag": "supportive_allyship",
+        "data_color": "#70D6D6",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Supportive Allyship & Solidarity_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Supportive Allyship & Solidarity_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Supportive Allyship & Solidarity",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "inclusive_narrative": {
+        "label": "Inclusive Representation & Narratives",
+        "data_tag": "inclusive_narrative",
+        "data_color": "#70D6D6",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Inclusive Representation & Narratives_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Inclusive Representation & Narratives_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Inclusive Representation & Narratives",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "counter_speech": {
+        "label": "Counter Speech & Debunking Misinformation",
+        "data_tag": "counter_speech",
+        "data_color": "#70D6D6",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Counter Speech & Debunking Misinformation_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Counter Speech & Debunking Misinformation_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Counter Speech & Debunking Misinformation",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "positive_media_representation": {
+        "label": "Positive Media Representation",
+        "data_tag": "positive_media_representation",
+        "data_color": "#70D6D6",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Positive Media Representation_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Positive Media Representation_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Positive Media Representation",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "ally_training_resources": {
+        "label": "Ally Training & Educational Resources",
+        "data_tag": "ally_training_resources",
+        "data_color": "#70D6D6",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Ally Training & Educational Resources_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Ally Training & Educational Resources_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Ally Training & Educational Resources",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      }
+    }
+  },
+  "historical_education": {
+    "label": "Historical & Educational Context",
+    "data_tag": "historical_education",
+    "data_color": "#8A2BE2",
+    "submenu": {
+      "activism_history": {
+        "label": "History of Trans & Intersex Activism",
+        "data_tag": "activism_history",
+        "data_color": "#A084E6",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_History of Trans & Intersex Activism_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "History of Trans & Intersex Activism_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_History of Trans & Intersex Activism",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "key_figures": {
+        "label": "Key Figures & Milestones",
+        "data_tag": "key_figures",
+        "data_color": "#A084E6",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Key Figures & Milestones_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Key Figures & Milestones_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Key Figures & Milestones",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "educational_resources": {
+        "label": "Educational Resources & Articles",
+        "data_tag": "educational_resources",
+        "data_color": "#A084E6",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Educational Resources & Articles_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Educational Resources & Articles_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Educational Resources & Articles",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      }
+    }
+  },
+  "legal_policy_advocacy": {
+    "label": "Legal & Policy Advocacy",
+    "data_tag": "legal_policy_advocacy",
+    "data_color": "#2E8B57",
+    "submenu": {
+      "current_legislation": {
+        "label": "Current Legislation & Policies",
+        "data_tag": "current_legislation",
+        "data_color": "#3CB371",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Current Legislation & Policies_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Current Legislation & Policies_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Current Legislation & Policies",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "rights_updates": {
+        "label": "Rights Updates & Legal News",
+        "data_tag": "rights_updates",
+        "data_color": "#3CB371",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Rights Updates & Legal News_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Rights Updates & Legal News_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Rights Updates & Legal News",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "legal_support": {
+        "label": "Legal Support & Resources",
+        "data_tag": "legal_support",
+        "data_color": "#3CB371",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Legal Support & Resources_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Legal Support & Resources_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Legal Support & Resources",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      }
+    }
+  },
+  "mental_health_support": {
+    "label": "Mental Health & Community Support",
+    "data_tag": "mental_health_support",
+    "data_color": "#FF69B4",
+    "submenu": {
+      "crisis_support": {
+        "label": "Crisis Support & Helplines",
+        "data_tag": "crisis_support",
+        "data_color": "#FF85C2",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Crisis Support & Helplines_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Crisis Support & Helplines_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Crisis Support & Helplines",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "support_groups": {
+        "label": "Local & Online Support Groups",
+        "data_tag": "support_groups",
+        "data_color": "#FF85C2",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Local & Online Support Groups_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Local & Online Support Groups_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Local & Online Support Groups",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "wellness_resources": {
+        "label": "Wellness Resources & Self-Care",
+        "data_tag": "wellness_resources",
+        "data_color": "#FF85C2",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Wellness Resources & Self-Care_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Wellness Resources & Self-Care_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Wellness Resources & Self-Care",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      }
+    }
+  },
+  "intersectional_perspectives": {
+    "label": "Intersectional Perspectives",
+    "data_tag": "intersectional_perspectives",
+    "data_color": "#FFA500",
+    "submenu": {
+      "racial_intersections": {
+        "label": "Racial & Ethnic Intersections",
+        "data_tag": "racial_intersections",
+        "data_color": "#FFB733",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Racial & Ethnic Intersections_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Racial & Ethnic Intersections_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Racial & Ethnic Intersections",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "disability_intersections": {
+        "label": "Disability & Accessibility Issues",
+        "data_tag": "disability_intersections",
+        "data_color": "#FFB733",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Disability & Accessibility Issues_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Disability & Accessibility Issues_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Disability & Accessibility Issues",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "economic_justice": {
+        "label": "Economic Justice & Class",
+        "data_tag": "economic_justice",
+        "data_color": "#FFB733",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Economic Justice & Class_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Economic Justice & Class_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Economic Justice & Class",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      }
+    }
+  },
+  "community_activism": {
+    "label": "Community Activism & Organizing",
+    "data_tag": "community_activism",
+    "data_color": "#228B22",
+    "submenu": {
+      "local_organizing": {
+        "label": "Local Organizing & Events",
+        "data_tag": "local_organizing",
+        "data_color": "#32CD32",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Local Organizing & Events_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Local Organizing & Events_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Local Organizing & Events",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "online_campaigns": {
+        "label": "Online Campaigns & Social Media",
+        "data_tag": "online_campaigns",
+        "data_color": "#32CD32",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Online Campaigns & Social Media_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Online Campaigns & Social Media_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Online Campaigns & Social Media",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "volunteer_opportunities": {
+        "label": "Volunteer Opportunities",
+        "data_tag": "volunteer_opportunities",
+        "data_color": "#32CD32",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Volunteer Opportunities_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Volunteer Opportunities_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Volunteer Opportunities",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      }
+    }
+  },
+  "self_care": {
+    "label": "Self-Care & Wellness",
+    "data_tag": "self_care",
+    "data_color": "#FF4500",
+    "submenu": {
+      "mindfulness": {
+        "label": "Mindfulness & Meditation",
+        "data_tag": "mindfulness",
+        "data_color": "#FF6347",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Mindfulness & Meditation_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Mindfulness & Meditation_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Mindfulness & Meditation",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "physical_wellness": {
+        "label": "Physical Wellness & Fitness",
+        "data_tag": "physical_wellness",
+        "data_color": "#FF6347",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Physical Wellness & Fitness_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Physical Wellness & Fitness_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Physical Wellness & Fitness",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "creative_therapy": {
+        "label": "Creative Therapy & Expression",
+        "data_tag": "creative_therapy",
+        "data_color": "#FF6347",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Creative Therapy & Expression_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Creative Therapy & Expression_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Creative Therapy & Expression",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      }
+    }
+  },
+  "trans_joy": {
+    "label": "Trans Joy & Celebration",
+    "data_tag": "trans_joy",
+    "data_color": "#FFD700",
+    "submenu": {
+      "artistic_expression": {
+        "label": "Artistic Expression & Creativity",
+        "data_tag": "artistic_expression",
+        "data_color": "#FFE066",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Artistic Expression & Creativity_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Artistic Expression & Creativity_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Artistic Expression & Creativity",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "celebratory_events": {
+        "label": "Community Celebrations & Pride Events",
+        "data_tag": "celebratory_events",
+        "data_color": "#FFE066",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Community Celebrations & Pride Events_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Community Celebrations & Pride Events_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Community Celebrations & Pride Events",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      },
+      "success_stories": {
+        "label": "Success Stories & Inspirational Journeys",
+        "data_tag": "success_stories",
+        "data_color": "#FFE066",
+        "is_semantic": false,
+        "variant": [
+          {
+            "label": "{name_subject}_Success Stories & Inspirational Journeys_{name_target}",
+            "has_subject": true,
+            "has_target": true
+          },
+          {
+            "label": "Success Stories & Inspirational Journeys_{name_target}",
+            "has_subject": false,
+            "has_target": true
+          },
+          {
+            "label": "{name_subject}_Success Stories & Inspirational Journeys",
+            "has_subject": true,
+            "has_target": false
+          }
+        ]
+      }
+    }
+  }
+}

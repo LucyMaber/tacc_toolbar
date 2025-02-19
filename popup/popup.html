@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TACC Highlighter Extension</title>
+    <style>
+      /* Universal box-sizing */
+      *, *::before, *::after {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 10px;
+        width: 600px;
+        max-width: 600px;
+        background: #fff;
+      }
+      .tabs {
+        display: flex;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #ccc;
+      }
+      .tab {
+        flex: 1;
+        text-align: center;
+        padding: 8px;
+        cursor: pointer;
+        border: 1px solid #ccc;
+        border-bottom: none;
+        background-color: #f2f2f2;
+        font-size: 14px;
+      }
+      .tab.active {
+        background-color: #fff;
+        font-weight: bold;
+      }
+      .content-section {
+        display: none;
+      }
+      .content-section.active {
+        display: block;
+      }
+      button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+      #buttonContainer {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 10px;
+      }
+      #metadata,
+      #entityMetadata,
+      #importStatus {
+        margin-bottom: 10px;
+        font-size: 12px;
+        word-wrap: break-word;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 12px;
+        margin-bottom: 10px;
+        table-layout: fixed;
+      }
+      th,
+      td {
+        padding: 8px;
+        border: 1px solid #ccc;
+        text-align: left;
+        word-wrap: break-word;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+      caption {
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 8px;
+      }
+      input[type="text"],
+      select {
+        margin-bottom: 8px;
+        padding: 6px;
+        width: calc(50% - 10px);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Tabs -->
+    <div class="tabs">
+      <div class="tab active" id="tab-highlights">Highlights</div>
+      <div class="tab" id="tab-entities">Entities</div>
+      <div class="tab" id="tab-settings">Settings</div>
+      <div class="tab" id="tab-instructions">Instructions</div>
+      <div class="tab" id="tab-import">Import</div>
+    </div>
+
+    <!-- Highlights Section -->
+    <div id="highlightsSection" class="content-section active">
+      <h2>Export Highlights</h2>
+      <div id="buttonContainer">
+        <button id="exportButton">Export Data</button>
+        <button id="sendToTACCButton">Send to TACC</button>
+      </div>
+      <div id="metadata"></div>
+      <table id="highlightTable">
+        <caption>Highlights Data</caption>
+        <thead>
+          <tr>
+            <th>Tag</th>
+            <th>Text</th>
+            <th>Timestamp</th>
+            <th>Context</th>
+            <th>Location</th>
+            <th>Offsets</th>
+            <th>Subject</th>
+            <th>Target</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Rows will be inserted here by popup.js -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Entities Section -->
+    <div id="entitiesSection" class="content-section">
+      <h2>Entity Highlights</h2>
+      <div id="entityMetadata"></div>
+      <input type="text" id="entityName" placeholder="Entity Name" />
+      <select id="entityType">
+        <option value="">Select Entity Type</option>
+        <option value="Person">Person</option>
+        <option value="Organization">Organization</option>
+        <option value="Location">Location</option>
+        <option value="Date">Date</option>
+        <option value="Time">Time</option>
+        <option value="Money">Money</option>
+        <option value="Percent">Percent</option>
+        <option value="Miscellaneous">Miscellaneous</option>
+      </select>
+      <button id="addEntityButton">Add Entity</button>
+      <table id="entityTable">
+        <caption>Entity Highlights Data</caption>
+        <thead>
+          <tr>
+            <th>Entity Type</th>
+            <th>Name</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Entity rows will be inserted here by popup.js -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Settings Section -->
+    <div id="settingsSection" class="content-section">
+      <h2>Settings</h2>
+      <p>Configure your preferences here.</p>
+      <label>
+        <input type="checkbox" id="optionHighlightOnClick" checked />
+        Highlight on click
+      </label>
+    </div>
+
+    <!-- Instructions Section -->
+    <div id="instructionsSection" class="content-section">
+      <h2>Instructions</h2>
+      <p>
+        1. Select text on any webpage.<br />
+        2. Right-click to open the context menu and choose a highlight category.<br />
+        3. If a tag supports entity assignment, choose "Assign Entities..." to add a subject and target.<br />
+        4. Click the extension icon to view your highlights and export data.<br />
+        5. Use the "Settings" tab to adjust your preferences.
+      </p>
+    </div>
+
+    <!-- Import Section -->
+    <div id="importSection" class="content-section">
+      <h2>Import Highlights</h2>
+      <input type="file" id="importFile" accept=".json" />
+      <button id="importButton">Import Highlights</button>
+      <div id="importStatus"></div>
+      <table id="importHighlightTable">
+        <caption>Imported Highlights</caption>
+        <thead>
+          <tr>
+            <th>Original Tag</th>
+            <th>Edit Tag</th>
+            <th>Text</th>
+            <th>Timestamp</th>
+            <th>Context</th>
+            <th>Location</th>
+            <th>Offsets</th>
+            <th>Subject</th>
+            <th>Target</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Imported highlight rows will be inserted here by popup.js -->
+        </tbody>
+      </table>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

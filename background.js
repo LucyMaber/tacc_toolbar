@@ -1,5 +1,8 @@
 // background.js
 
+// Use a unified API reference for both browsers.
+const extensionAPI = typeof browser !== "undefined" ? browser : chrome;
+
 // Object to store tag-to-color mapping for static menu items.
 const menuMapping = {};
 
@@ -10,7 +13,7 @@ function createContextMenuItems(menuObj, parentId = null) {
       const item = menuObj[key];
 
       // Create the base (non-variant) menu item.
-      chrome.contextMenus.create({
+      extensionAPI.contextMenus.create({
         id: item.data_tag,
         title: item.label,
         contexts: ["selection"],
@@ -27,7 +30,7 @@ function createContextMenuItems(menuObj, parentId = null) {
       // If the item supports dynamic entity assignment (i.e. has variants),
       // add an extra submenu item to let the user assign subject and target.
       if (item.variant && item.variant.length > 0) {
-        chrome.contextMenus.create({
+        extensionAPI.contextMenus.create({
           id: item.data_tag + "_assign",
           title: "Assign Entities...",
           contexts: ["selection"],
@@ -41,7 +44,7 @@ function createContextMenuItems(menuObj, parentId = null) {
 }
 
 // Load the menu JSON file and create the static context menus.
-fetch(chrome.runtime.getURL('menu.json'))
+fetch(extensionAPI.runtime.getURL('menu.json'))
   .then(response => response.json())
   .then(menu => {
     createContextMenuItems(menu);
@@ -56,7 +59,7 @@ fetch(chrome.runtime.getURL('menu.json'))
 function createDynamicEntityMenuItems(entities) {
   console.log("Creating dynamic entity menu for:", entities);
   const parentId = "entity_labeling";
-  chrome.contextMenus.create({
+  extensionAPI.contextMenus.create({
     id: parentId,
     title: "Entity Labeling",
     contexts: ["selection"],
@@ -64,7 +67,7 @@ function createDynamicEntityMenuItems(entities) {
   });
   entities.forEach(entity => {
     const id = `Label_entity_${entity.name}`;
-    chrome.contextMenus.create({
+    extensionAPI.contextMenus.create({
       id: id,
       title: `${entity.name} (${entity.type})`,
       contexts: ["selection"],
@@ -77,7 +80,7 @@ function createDynamicEntityMenuItems(entities) {
 }
 
 // Initialize the dynamic entity menu from storage.
-chrome.storage.sync.get("entities", (result) => {
+extensionAPI.storage.sync.get("entities", (result) => {
   const entities = result.entities || [];
   if (entities.length > 0) {
     createDynamicEntityMenuItems(entities);
@@ -85,10 +88,10 @@ chrome.storage.sync.get("entities", (result) => {
 });
 
 // Listen for storage changes to update the dynamic entity menu.
-chrome.storage.onChanged.addListener((changes, areaName) => {
+extensionAPI.storage.onChanged.addListener((changes, areaName) => {
   if (areaName === "sync" && changes.entities) {
     // Remove the existing dynamic entity menu.
-    chrome.contextMenus.remove("entity_labeling", () => {
+    extensionAPI.contextMenus.remove("entity_labeling", () => {
       const newEntities = changes.entities.newValue || [];
       if (newEntities.length > 0) {
         createDynamicEntityMenuItems(newEntities);
@@ -98,18 +101,18 @@ chrome.storage.onChanged.addListener((changes, areaName) => {
 });
 
 // Listen for context menu clicks.
-chrome.contextMenus.onClicked.addListener((info, tab) => {
+extensionAPI.contextMenus.onClicked.addListener((info, tab) => {
   const id = info.menuItemId;
   
   if (id.endsWith("_assign")) {
     // "Assign Entities..." was clicked.
     // Remove the "_assign" suffix to obtain the base tag.
     const baseTag = id.replace("_assign", "");
-    chrome.tabs.sendMessage(tab.id, { action: "assignEntities", tag: baseTag });
+    extensionAPI.tabs.sendMessage(tab.id, { action: "assignEntities", tag: baseTag });
   } else if (id.startsWith("Label_entity_")) {
     // A dynamic entity labeling menu item was clicked.
     // Retrieve the entity details from storage.
-    chrome.storage.sync.get("entities", (result) => {
+    extensionAPI.storage.sync.get("entities", (result) => {
       const entities = result.entities || [];
       const entityName = id.replace("Label_entity_", "");
       const entity = entities.find(e => e.name === entityName);
@@ -117,7 +120,7 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
         const bgColor = menuMapping[id] || "#D1E8FF";
         // Directly highlight the selection using the dynamic entity info.
         // Here we assign the entity as the subject (target left empty).
-        chrome.tabs.sendMessage(tab.id, { 
+        extensionAPI.tabs.sendMessage(tab.id, { 
           action: "highlightEntity", 
           tag: `${entity.name} (${entity.type})`, 
           bgColor: bgColor,
@@ -129,6 +132,6 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
   } else {
     // Otherwise, perform the standard highlight action.
     const bgColor = menuMapping[id] || "yellow";
-    chrome.tabs.sendMessage(tab.id, { action: "highlight", tag: id, bgColor: bgColor });
+    extensionAPI.tabs.sendMessage(tab.id, { action: "highlight", tag: id, bgColor: bgColor });
   }
 });

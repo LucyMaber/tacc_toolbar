@@ -1,4 +1,7 @@
 (() => {
+  // Use a unified API reference for both browsers.
+  const extensionAPI = typeof browser !== "undefined" ? browser : chrome;
+
   let savedRange = null;
 
   // Update savedRange whenever the selection changes.
@@ -105,7 +108,7 @@
   };
 
   // Listen for messages from background/popup scripts.
-  chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+  extensionAPI.runtime.onMessage.addListener((message, sender, sendResponse) => {
     let range = null;
     const selection = window.getSelection();
     if (selection && selection.rangeCount && !selection.isCollapsed) {
@@ -184,7 +187,6 @@
   });
 
   // Create an enhanced modal for entity assignment using stored entities.
-  // Now accepts the bgColor to use if needed.
   function createEntityAssignmentModal(tag, bgColor, callback) {
     // Create overlay.
     const overlay = document.createElement('div');
@@ -207,7 +209,7 @@
     modal.style.width = '320px';
     modal.style.boxShadow = '0 2px 10px rgba(0,0,0,0.2)';
     
-    // Modal HTML now includes fields for "Other" values and a description.
+    // Modal HTML includes fields for "Other" values and a description.
     modal.innerHTML = `
       <h3>Assign Entities</h3>
       <div>
@@ -215,7 +217,6 @@
         <select id="subjectDropdown" style="width:100%;">
           <option value="None">None</option>
         </select>
-        <!-- When "Other" is selected, show these fields -->
         <input type="text" id="subjectOther" placeholder="Enter new subject" style="width:100%; display:none; margin-top:5px;"/>
         <select id="subjectTypeOther" style="width:100%; display:none; margin-top:5px;">
           <option value="">Select type</option>
@@ -231,7 +232,6 @@
         <select id="targetDropdown" style="width:100%;">
           <option value="None">None</option>
         </select>
-        <!-- When "Other" is selected, show these fields -->
         <input type="text" id="targetOther" placeholder="Enter new target" style="width:100%; display:none; margin-top:5px;"/>
         <select id="targetTypeOther" style="width:100%; display:none; margin-top:5px;">
           <option value="">Select type</option>
@@ -254,13 +254,13 @@
     document.body.appendChild(overlay);
 
     // Populate dropdowns from storage.
-    chrome.storage.sync.get("entities", (result) => {
+    extensionAPI.storage.sync.get("entities", (result) => {
       const entities = result.entities || [];
       populateDropdown(document.getElementById('subjectDropdown'), entities);
       populateDropdown(document.getElementById('targetDropdown'), entities);
     });
 
-    // When a dropdown value changes, show/hide the "Other" inputs.
+    // Show/hide "Other" inputs based on dropdown selection.
     const subjectDropdown = modal.querySelector('#subjectDropdown');
     const subjectOther = modal.querySelector('#subjectOther');
     const subjectTypeOther = modal.querySelector('#subjectTypeOther');
@@ -289,7 +289,6 @@
 
     // Handle form submission.
     modal.querySelector('#modalSubmit').addEventListener('click', () => {
-      // For subject.
       let subjectName = "";
       let subjectType = "";
       if (subjectDropdown.value === "None") {
@@ -298,13 +297,11 @@
         subjectName = subjectOther.value.trim();
         subjectType = subjectTypeOther.value;
       } else {
-        // Option value stored as "Name|Type"
         const parts = subjectDropdown.value.split("|");
         subjectName = parts[0];
         subjectType = parts[1] || "";
       }
 
-      // For target.
       let targetName = "";
       let targetType = "";
       if (targetDropdown.value === "None") {
@@ -318,17 +315,14 @@
         targetType = parts[1] || "";
       }
 
-      // Get description.
       const description = modal.querySelector('#descriptionInput').value.trim();
 
-      // If new subject or target entered, add them to storage.
       addEntityIfNew(subjectName, subjectType);
       addEntityIfNew(targetName, targetType);
       document.body.removeChild(overlay);
       callback(subjectName, subjectType, targetName, targetType, description);
     });
 
-    // Handle cancel.
     modal.querySelector('#modalCancel').addEventListener('click', () => {
       document.body.removeChild(overlay);
       callback("", "", "", "", "");
@@ -337,16 +331,12 @@
 
   // Populate a dropdown with entities from storage.
   function populateDropdown(dropdown, entities) {
-    // The dropdown already has a "None" option.
-    // Append existing entities.
     entities.forEach(entity => {
       const option = document.createElement("option");
-      // Store both name and type separated by a delimiter.
       option.value = `${entity.name}|${entity.type}`;
       option.textContent = `${entity.name} (${entity.type})`;
       dropdown.appendChild(option);
     });
-    // Add an "Other" option.
     const otherOption = document.createElement("option");
     otherOption.value = "Other";
     otherOption.textContent = "Other";
@@ -356,12 +346,11 @@
   // Add a new entity to storage if it doesn't exist already.
   function addEntityIfNew(name, type) {
     if (!name) return;
-    chrome.storage.sync.get("entities", (result) => {
+    extensionAPI.storage.sync.get("entities", (result) => {
       let entities = result.entities || [];
-      // Check if entity already exists (by name and type).
       if (!entities.some(e => e.name === name && e.type === type)) {
         entities.push({ name: name, type: type });
-        chrome.storage.sync.set({ entities: entities }, () => {
+        extensionAPI.storage.sync.set({ entities: entities }, () => {
           console.log("New entity added:", { name, type });
         });
       }

@@ -1,0 +1,36 @@
+{
+    "manifest_version": 2,
+    "name": "Dynamic Highlighter Extension",
+    "version": "1.0",
+    "description": "An extension to highlight text and dynamically label entities.",
+    "permissions": [
+      "contextMenus",
+      "storage",
+      "activeTab",
+      "<all_urls>"
+    ],
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ],
+    "browser_action": {
+      "default_popup": "popup/popup.html",
+      "default_icon": {
+        "16": "icons/NationalGeographic_2572187_3x2.png",
+        "48": "icons/NationalGeographic_2572187_3x2.png",
+        "128": "icons/NationalGeographic_2572187_3x2.png"
+      }
+    },
+    "icons": {
+      "16": "icons/NationalGeographic_2572187_3x2.png",
+      "48": "icons/NationalGeographic_2572187_3x2.png",
+      "128": "icons/NationalGeographic_2572187_3x2.png"
+    }
+  }
+  
